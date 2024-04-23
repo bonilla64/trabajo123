@@ -1,0 +1,90 @@
+/* Reset básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+    background: #f4f4f4; /* Fondo claro para una apariencia limpia */
+    color: #333; /* Color de texto oscuro para contraste */
+    line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
+    padding: 20px; /* Espaciado alrededor del contenido para evitar que toque los bordes */
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+    max-width: 1200px; /* Ancho máximo para asegurar que el contenido no se estire demasiado en pantallas grandes */
+    margin: auto; /* Centrado automático */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    padding: 0 20px; /* Espaciado interno */
+}
+
+/* Cabecera con un estilo más moderno */
+.header {
+    background: #fff; /* Fondo blanco para la cabecera */
+    padding: 20px 0; /* Espaciado vertical */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+}
+
+/* Navegación principal */
+.navbar {
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
+    align-items: center; /* Centrado vertical de los elementos */
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.navbar ul {
+    list-style: none; /* Elimina los estilos de lista por defecto */
+}
+
+.navbar ul li {
+    display: inline; /* Muestra los elementos de la lista en línea */
+}
+
+.navbar ul li a {
+    color: #333; /* Color de texto oscuro para los enlaces */
+    padding: 5px 20px; /* Espaciado alrededor de los enlaces */
+    text-transform: uppercase; /* Texto en mayúsculas para un aspecto más formal */
+    transition: color 0.3s ease-in; /* Transición suave para el cambio de color */
+}
+
+.navbar ul li a:hover {
+    color: #007bff; /* Color de enlace al pasar el ratón */
+}
+
+/* Estilos para botones primarios */
+.btn {
+    display: inline-block; /* Muestra el botón en línea con otros elementos */
+    background: #007bff; /* Color de fondo azul */
+    color: #fff; /* Texto blanco para contraste */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
+    transition: background 0.3s ease-in; /* Transición suave para el cambio de fondo */
+}
+
+.btn:hover {
+    background: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambia la dirección de los elementos a vertical en pantallas pequeñas */
+    }
+
+    .navbar ul {
+        text-align: center; /* Centra los enlaces en pantallas pequeñas */
+        padding: 0; /* Elimina el espaciado */
+    }
+
+    .navbar ul li {
+        display: block; /* Muestra los elementos de la lista en bloques individuales */
+        margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    }
+}
